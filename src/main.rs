@@ -1,14 +1,6 @@
-mod extracter;
+mod page;
 
-use clap::Parser;
-use extracter::greetings;
-
-#[derive(Parser, Debug)]
-struct Cli {
-    name: String,
-}
-
-fn main() {
-    let args = Cli::parse();
-    greetings(&args.name);
+#[tokio::main]
+async fn main() {
+    println!("Hello, world!");
 }
