@@ -35,7 +35,7 @@ flowchart LR
 
         subgraph batch1[Batche 1]
             direction TB
-            E1[[Extract concurrently each page in batch]]
+            E1[[Asynchronous requests]]
             subgraph bs1[ ]
                 direction TB
                 A1_(['data/1' fa:fa-cogs])
@@ -47,7 +47,7 @@ flowchart LR
 
         subgraph batch2[Batche 2]
             direction TB
-            E2[[Extract concurrently each page in batch]]
+            E2[[Asynchronous requests]]
             subgraph bs2[ ]
                 direction TB
                 A4_(['data/4' fa:fa-cogs])
@@ -59,7 +59,7 @@ flowchart LR
 
         subgraph batch3[Batche 3]
             direction TB
-            E3[[Extract concurrently each page in batch]]
+            E3[[Asynchronous requests]]
             subgraph bs3[ ]
                 direction TB
                 A7_(['data/7' fa:fa-cogs])
