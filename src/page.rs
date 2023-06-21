@@ -39,3 +39,13 @@ impl Paginated for SimplePaginated {
         client.get(&url).headers(self.headers.clone()).send().await
     }
 }
+
+impl SimplePaginated {
+    pub async fn data_from_page(&self, page: u32) -> serde_json::Value {
+        self.page(page)
+            .and_then(|r| r.json::<Page>())
+            .await
+            .unwrap()
+            .data
+    }
+}
